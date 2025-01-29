@@ -1,1 +1,4 @@
-<p>dashboard works!</p>
+<app-header (showSidebarCliked)="showSider()"></app-header>
+@if (isShowSidebar) {
+    <app-sidebar></app-sidebar>
+}
