@@ -29,3 +29,6 @@
   left: unset;
   right: 0;
 }
+.subHeader-dropdown-menu li button img {
+  width: 1.5rem;
+}

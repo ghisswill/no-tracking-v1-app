@@ -21,37 +21,41 @@
         <li class="nav-item">
           <a class="nav-link" href="" data-bs-target="#myModal" data-bs-toggle="modal">About</a>
         </li>
-        <li class="nav-item">
-          <!-- <a class="nav-link btn dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <i class="fa-solid fa-circle-user"></i>
-            <label >username</label>
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div> -->
-        </li>
         <li class="nav-item ">
-          <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             <i class="fa-solid fa-circle-user"></i>
-            <label >username</label>
+            <label>{{ 'username' | translate}}</label>
           </button>
           <ul class="dropdown-menu subHeader-dropdown-menu">
             <li><button class="dropdown-item" type="button">
-              <i class="fa-solid fa-circle-user"></i>
-              <label for="">Profile</label>
-            </button></li>
+                <i class="fa-solid fa-circle-user"></i>
+                <label for="">Profile</label>
+              </button></li>
             <li><button class="dropdown-item" type="button">
-              <i class="fa-solid fa-gear"></i>
-              <label for="">Setting</label>
-            </button></li>
+                <i class="fa-solid fa-gear"></i>
+                <label for="">Setting</label>
+              </button></li>
             <li><button class="dropdown-item" type="button">
-              <i class="fa-solid fa-right-to-bracket"></i>
-              <label for="">Logout</label>
-            </button></li>
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <label for="">Logout</label>
+              </button></li>
+          </ul>
+        </li>
+        <li class="nav-item ">
+          <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <label>{{ lang }}</label>
+          </button>
+          <ul class="dropdown-menu subHeader-dropdown-menu">
+            <li><button class="dropdown-item" type="button" (click)="changeLang('fr')">
+                <img src="../../../assets/flags/fr.png" alt="fr">
+                <label for="">{{ 'languages.french' | translate}}</label>
+              </button></li>
+            <li><button class="dropdown-item" type="button" (click)="changeLang('en')">
+                <img src="../../../assets/flags/us.png" alt="fr">
+                <label for="">{{ 'languages.english' | translate}}</label>
+              </button></li>
           </ul>
         </li>
       </ul>

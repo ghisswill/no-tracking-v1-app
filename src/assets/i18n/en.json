@@ -1,0 +1,15 @@
+{
+    "languages" : {
+        "french": "French",
+        "english": "English"
+    },
+    "sidebar" : {
+        "menu": {
+            "dashboard": "Dashboard",
+            "group": "Group",
+            "cars": "Cars",
+            "users": "Users",
+            "resellers": "Resellers"
+        }
+    }
+}

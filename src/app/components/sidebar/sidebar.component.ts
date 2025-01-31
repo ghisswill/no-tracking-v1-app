@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { MenuItem } from '../../models/menuItem.model';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
@@ -14,12 +15,15 @@ export class SidebarComponent implements OnInit {
   isSidebarCollapsed: boolean = false;
   sidebarToggle = new EventEmitter<void>();
   menuItems: MenuItem[] = [];
+  
+  constructor(private translate: TranslateService) {}
 
   ngOnInit() {
     this.menuItems = [
       {
         icon: "fa-solid fa-chart-simple",
-        label: "Dashoard"
+        label: "Dashbord"
+        //label: this.translate.instant('sidebar.menu.dashoard')
       },
       {
         icon: "fa-solid fa-users-line",

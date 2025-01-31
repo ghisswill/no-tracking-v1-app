@@ -1,0 +1,15 @@
+{
+    "languages" : {
+        "french": "Français",
+        "english": "Anglais"
+    },
+    "sidebar" : {
+        "menu": {
+            "dashboard": "Tableau de bord",
+            "group": "Groupe",
+            "cars": "Véhicules",
+            "users": "Utilisateurs",
+            "resellers": "Revendeurs"
+        }
+    }
+}
