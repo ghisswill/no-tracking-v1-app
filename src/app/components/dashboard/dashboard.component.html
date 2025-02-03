@@ -1,4 +1,23 @@
-<app-header (showSidebarCliked)="showSider()"></app-header>
-@if (isShowSidebar) {
-    <app-sidebar></app-sidebar>
-}
+<!-- <div class="row">
+    <div class="col-md-12">
+        <app-header (showSidebarCliked)="showSider()"></app-header>
+    </div>
+    <div class="col-md-12">
+        <div class="envlop-content">
+            @if (isShowSidebar) {
+            <app-sidebar></app-sidebar>
+            }
+            <app-card-block class="card_block"></app-card-block>
+        </div>
+    </div>
+</div> -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <app-header (showSidebarCliked)="showSider()"></app-header> 
+        </div>
+        <div class="col-sm-12">
+            <app-sidebar></app-sidebar>
+        </div>
+    </div>
+</div>

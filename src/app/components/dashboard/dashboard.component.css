@@ -1,0 +1,9 @@
+/* .card_block {
+    position: relative;
+    top: 4rem;
+    left: 14rem;
+} */
+.envlop-content {
+    display: flex;
+    flex-wrap: wrap;
+}
