@@ -11,5 +11,5 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class CardComponent {
 
-  @Input() card = new Card();
+  @Input() cards: Card[] | undefined;
 }
