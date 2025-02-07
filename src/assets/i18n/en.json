@@ -6,10 +6,15 @@
     "sidebar" : {
         "menu": {
             "dashboard": "Dashboard",
-            "group": "Group",
+            "groups": "Groups",
             "cars": "Cars",
             "users": "Users",
-            "resellers": "Resellers"
+            "resellers": "Resellers",
+            "helpCenter": "help Center",
+            "reportingCenter": "Reporting Center",
+            "addMaps": "Add Maps",
+            "options": "Options",
+            "virtualBarrier": "Virtual Barrier"
         }
     }
 }

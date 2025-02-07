@@ -102,11 +102,11 @@
   .sidebar::-webkit-scrollbar {
     width: 5px;
     height: 8px;
-    background-color: #fff;
+    background-color: #273644;
   }
   
   .sidebar::-webkit-scrollbar-thumb {
-    background-color: #aab7cf;
+    background-color: #273644;
   }
   
   @media (min-width: 1200px) {
@@ -164,9 +164,9 @@
     align-items: center;
     font-size: 15px;
     font-weight: 600;
-    color: #4154f1;
+    color: #9299a1;
     transition: 0.3;
-    background: #f6f9ff;
+    background: #273644 !important;
     padding: 10px 15px;
     border-radius: 4px;
   }
@@ -174,11 +174,11 @@
   .sidebar-nav .nav-link i {
     font-size: 16px;
     margin-right: 10px;
-    color: #4154f1;
+    color: #9299a1 !important;
   }
   
   .sidebar-nav .nav-link.collapsed {
-    color: #012970;
+    color: #9299a1;
     background: #fff;
   }
   
@@ -187,12 +187,12 @@
   }
   
   .sidebar-nav .nav-link:hover {
-    color: #4154f1;
+    color: #ffffff;
     background: #f6f9ff;
   }
   
   .sidebar-nav .nav-link:hover i {
-    color: #4154f1;
+    color: #ffffff;
   }
   
   .sidebar-nav .nav-link .bi-chevron-down {
@@ -215,10 +215,11 @@
     align-items: center;
     font-size: 14px;
     font-weight: 600;
-    color: #012970;
+    color: #9299a1;
     transition: 0.3;
     padding: 10px 0 10px 40px;
     transition: 0.3s;
+    text-decoration: none;
   }
   
   .sidebar-nav .nav-content a i {
@@ -230,10 +231,13 @@
   
   .sidebar-nav .nav-content a:hover,
   .sidebar-nav .nav-content a.active {
-    color: #4154f1;
+    color: #ffffff;
   }
   
   .sidebar-nav .nav-content a.active i {
     background-color: #4154f1;
+  }
+  .nav-content li a span {
+    text-decoration: none;
   }
   

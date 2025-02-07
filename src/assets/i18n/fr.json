@@ -6,10 +6,15 @@
     "sidebar" : {
         "menu": {
             "dashboard": "Tableau de bord",
-            "group": "Groupe",
+            "groups": "Groupes",
             "cars": "Véhicules",
             "users": "Utilisateurs",
-            "resellers": "Revendeurs"
+            "resellers": "Revendeurs",
+            "helpCenter": "Centre d'aide",
+            "reportingCenter": "Centre des Rapports",
+            "addMaps": "Ajout Maps",
+            "options": "Options",
+            "virtualBarrier": "Barrière Virtuelle"
         }
     }
 }

@@ -4,3 +4,8 @@ export interface MenuItem {
     children?: MenuItem[];
     isOpen?: boolean;
 } 
+
+export interface Child {
+    icon?: string;
+    label: string;
+}
