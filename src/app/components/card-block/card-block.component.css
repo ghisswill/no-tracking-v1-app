@@ -1,19 +1,11 @@
-/*--------------------------------------------------------------
-# Main
---------------------------------------------------------------*/
-#main {
-    margin-top: 3rem;
-    margin-left: 17rem;
-    padding: 20px 30px;
-    transition: all 0.3s;
-  }
-  .card {
+
+  .card_structure {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
     margin: 1rem 0;
     padding: 1rem;
-  }
-  .card_structure {
-    display: ruby;
-    margin-left: 1rem;
   }
   @media (max-width: 1199px) {
     #main {

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { HeaderComponent } from "../header/header.component";
 import { CardBlockComponent } from "../card-block/card-block.component";
+import { MapsComponent } from "../maps/maps.component";
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [HeaderComponent, SidebarComponent, CardBlockComponent],
+  imports: [HeaderComponent, SidebarComponent, CardBlockComponent, MapsComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
