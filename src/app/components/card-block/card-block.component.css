@@ -2,7 +2,7 @@
   .card_structure {
     display: flex;
     flex-direction: row;
-    align-items: start;
+    justify-content: start;
     flex-wrap: wrap;
     margin: 1rem 0;
     padding: 1rem;
