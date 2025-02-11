@@ -29,11 +29,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
 
   ngOnInit() {
-    this.loginService.getUser().subscribe({
-      next: (result: User) => {
-        this.userConnected = result;
-      }
-    });
     this.lang = (localStorage.getItem('lang') || 'en').toUpperCase();
     this.translate.setDefaultLang('fr');
   }
@@ -48,15 +43,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   logout() {
-    this.logoutSubscription = this.loginService.logout()
-    .subscribe({
-      next: _ => {
-        this.navigateLogin();
-      },
-      error: _ => {
-        this.navigateLogin();
-      }
-    });
   }
 
   navigateLogin() {

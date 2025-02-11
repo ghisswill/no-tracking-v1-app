@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { User } from '../../models/user.model';
-import { Observable, of } from 'rxjs';
+import { map, Observable, of, tap } from 'rxjs';
 
 export interface Credentials {
   username: string;
@@ -13,34 +13,25 @@ export interface Credentials {
 })
 export class LoginService {
 
-  userConnected: User = {
-    username: 'sa',
-    lastName: 'text',
-    firstName: 'text',
-    password: '1234'
-  }
-
   private http = inject(HttpClient);
-  user = new User;
+  private errorService = inject(HttpErrorResponse);
+  private usersUrl = 'api/users';
+  user = signal<User | null | undefined>(undefined);
 
-  constructor() { 
-    localStorage.setItem('userConnected', JSON.stringify(this.userConnected));
+  constructor() {
   }
 
-  login(credentials: Credentials): Observable<User> {
-    
-    if(this.userConnected.password == credentials.passsword && this.userConnected.username == credentials.username) {
-      this.user = this.userConnected;
-    }
-    return of(this.user);
+  login(credentials: Credentials): Observable<User | null | undefined> {
+    return this.http.post<User>(this.usersUrl, credentials).pipe(
+      tap((result: any) => {
+        localStorage.setItem('token', result['token']);
+        const user = Object.assign(new User(), result['user']);
+        this.user.set(user);
+      }),
+      map((result: any) => {
+        return this.user();
+      })
+    );
   }
 
-  getUser(): Observable<User> {
-    return of(this.userConnected);
-  }
-
-  logout(): Observable<null> {
-    localStorage.removeItem('userConnected');
-    return of(null);
-  }
 }

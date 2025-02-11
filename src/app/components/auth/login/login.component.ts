@@ -34,7 +34,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.loginSubscription = this.loginService.login(this.form.value as Credentials)
     .subscribe({
       next: (result: User | undefined | null) => {
-        this.goToDashoard();
+        console.log("result du login " + result);
+        
       },
       error: error => {
         this.invalidCredentials = true;
